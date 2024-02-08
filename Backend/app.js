@@ -1,0 +1,10 @@
+const express = require('express');
+const cors = require('cors');
+const sequelize = require('./utils/database');
+const expenseRoutes = require('./routes/expense');
+const bodyParser = require('body-parser');
+const app = express();
+app.use(cors());
+app.use(bodyParser.json({ extended: false }));
+app.use('/get-expense', expenseRoutes);
+sequelize.sync().then(() => app.listen(4000));

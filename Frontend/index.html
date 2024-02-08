@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Income Expense tracker</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.7/axios.min.js"
+      integrity="sha512-NQfB/bDaB8kaSXF8E77JjhHG5PM6XVRxvHzkZiwl3ddWCEPBa23T76MuWSwAJdMGJnmQqM0VeY9kFszsrBEFrQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <div>
+      <form action="#" class="form">
+        <ul>
+          <li>Choose Expense Amount:</li>
+          <input
+            type="number"
+            name="amount"
+            id="amount"
+            placeholder="Rs."
+            required
+          />
+          <li>Choose Description:</li>
+          <input
+            type="text"
+            id="description"
+            name="description"
+            placeholder="Description"
+            required
+          />
+          <form action="">
+            <li>Choose a category:</li>
+            <input
+              list="Category"
+              name="category"
+              id="category"
+              placeholder="Category"
+              required
+            />
+            <datalist id="Category">
+              <option value="Fuel">Fuel</option>
+              <option value="Movie">Movie</option>
+              <option value="Hangout">Hangout</option>
+              <option value="Food">Food</option>
+            </datalist>
+          </form>
+        </ul>
+        <button class="btn" id="btn" type="submit">Add Expense</button>
+      </form>
+    </div>
+    <div>
+      <ul class="List-group"></ul>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
